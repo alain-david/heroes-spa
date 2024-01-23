@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { GetHeroeById } from "../helpers";
 import { useMemo } from "react";
 
@@ -16,7 +16,7 @@ export const HeroePage = () => {
     return <Navigate to={"/marvel"} />;
   }
 
-  const imgUrl = `/assets/${id}.jpg`;
+  const imgUrl = `/${id}.jpg`;
 
   return (
     <div className="container">
