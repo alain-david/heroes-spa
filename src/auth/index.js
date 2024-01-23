@@ -1,2 +1,2 @@
-export * from "./context";
+export * from "./context/index";
 export * from "./pages/LoginPage";
