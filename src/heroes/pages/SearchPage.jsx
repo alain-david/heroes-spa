@@ -3,7 +3,7 @@ import querystring from "query-string";
 
 import { useForm } from "../../hooks/useForm";
 import { HeroeCard } from "../components";
-import { GetHeroesByName } from "../helpers/GetHeroesByName";
+import { GetHeroesByName } from "../helpers";
 
 export const SearchPage = () => {
   const navigator = useNavigate();
@@ -26,7 +26,7 @@ export const SearchPage = () => {
   };
 
   return (
-    <div className="container">
+    <>
       <h1>Search</h1>
       <hr />
 
@@ -70,6 +70,6 @@ export const SearchPage = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };

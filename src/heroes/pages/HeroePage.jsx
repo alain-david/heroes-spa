@@ -1,6 +1,7 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { GetHeroeById } from "../helpers";
 import { useMemo } from "react";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+
+import { GetHeroeById } from "../helpers";
 
 export const HeroePage = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ export const HeroePage = () => {
   const imgUrl = `/${id}.jpg`;
 
   return (
-    <div className="container">
+    <>
       <div className="row mt-5">
         <div className="col-4 animate__animated animate__fadeInLeft">
           <img src={imgUrl} alt={hero.superhero} className="img-thumbnail" />
@@ -44,6 +45,6 @@ export const HeroePage = () => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };

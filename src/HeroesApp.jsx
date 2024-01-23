@@ -1,12 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-
 import { AppRouter } from "./router/AppRouter";
-import { NavBar } from "./ui/components/NavBar";
+import { AuthProvider } from "./auth";
 
 export const HeroesApp = () => {
   return (
-    <>
-      <RouterProvider router={AppRouter} />
-    </>
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   );
 };
